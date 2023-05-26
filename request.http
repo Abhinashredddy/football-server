@@ -1,0 +1,38 @@
+### Get All Players
+GET http://localhost:3000/players HTTP/1.1
+
+### Get Player By Id
+GET http://localhost:3000/players/6470b6d6a00d37196610bb2c
+
+###
+POST http://localhost:3000/players HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Abhinash",
+  "position": "Quarterback",
+  "rushingYards": 1,
+  "touchdownPasses": 1,
+  "sacks": 1,
+  "fieldGoalsMade": 0,
+  "fieldGoalsMissed": 0,
+  "catches": 0
+}
+
+### Update Player
+PUT http://localhost:3000/players/6470b6d6a00d37196610bb2c HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Abhinash Reddy",
+  "position": "Updated Position",
+  "rushingYards": 100,
+  "touchdownPasses": 50,
+  "sacks": 10,
+  "fieldGoalsMade": 2,
+  "fieldGoalsMissed": 1,
+  "catches": 20
+}
+
+### Delete Player
+DELETE http://localhost:3000/players/6470b6d6a00d37196610bb2c HTTP/1.1
